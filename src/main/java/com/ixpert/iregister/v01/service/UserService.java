@@ -10,13 +10,13 @@ public class UserService{
 
     @Autowired
     private UserRepository userRepository;
-    
+
     public User findByEmail(String email){
         return userRepository.findByEmail(email);
     }
 
     public User findByConfirmationToken(String confirmationToken){
-        return userRepository.findByConfirmationToken(confirmationToken)
+        return userRepository.findByConfirmationToken(confirmationToken);
     }
 
     public void saveUser(User user){
