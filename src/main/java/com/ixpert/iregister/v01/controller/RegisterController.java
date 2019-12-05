@@ -24,7 +24,7 @@ import java.util.UUID;
 @Controller
 public class RegisterController {
 
-    @Autowired
+ //   @Autowired
     private BCryptPasswordEncoder bCryptPasswordEncoder;
     @Autowired
     private UserService userService;
@@ -35,7 +35,7 @@ public class RegisterController {
     public ModelAndView showRegisrationPage(ModelAndView modelAndView, User user){
         modelAndView.addObject("user", user);
         modelAndView.setViewName("register");
-        return modelAndView
+        return modelAndView;
     }
 
     @RequestMapping(value = "/register", method = RequestMethod.POST)
